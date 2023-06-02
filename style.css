@@ -1,0 +1,250 @@
+* {
+  /* reset universal*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Escolhemos nomes quaisquer para definir os atributos de cor, background, cor borda, cor botão e cor entorno, imagem botão, que serão recebidos nos lugares indicados na página. */
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile-dark-1080x1920.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: (0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  /* Alterações dos atributos para o modo light! */
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light-1080x1920.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: (0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /* 
+    background-image: url(./assets/bg-mobile-dark\ \(1080x1920\).jpg); /*chama a imagem da pasta assets
+    background-repeat: no-repeat; /* evita a repetição da imagem
+    background-position: top center; /* eixo y da imagem a partir do seu ponto inicial e eixo x centralizado
+    background-size: cover; /* imagem cobre toda a viewport*/
+
+  /* Os atributos acima em shorthand: */
+  background: var(--bg-url) no-repeat top
+    /* Recebe o atributo definido em :root */ center/cover;
+  height: 100vh; /* Altura 100% da vh garantindo que não fique pedaços em branco em qq tamanho de visualização */
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color); /* Recebe o atributo definido em :root */
+}
+
+#container {
+  width: 100%;
+  max-width: 588px; /* Responsividade para dispositivos grandes. Medida indicada no Figma. */
+  /*margin: auto; /* centraliza caixas que possuem largura fixa. Divide automaticamente o espaço vazio po2, e insere as partes em ambos os lados */
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* Profile */
+#profile {
+  /* elemento pai de img editando o alinhamento do elemento filho */
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+    border: 1px solid red;
+  /*display: inline-block; /* Mantém as props. inline mas permite também a aplicação de props. do tipo block*/
+  width: 300px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#message {
+  text-align: center;
+  padding: 24px;
+}
+
+#message p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Switch */
+#switch {
+  position: relative; /* Altera a referência de posicionamento do elementos switch button */
+  width: 64px;
+  margin: 4px auto; /* Elemento block, "auto" p/ alinhar ao centro da vh no eixo x e add margin vertical*/
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center; /* Shorthand botão */
+  border: 0;
+  border-radius: 50%;
+  position: absolute; /* Sobrepõe os elementos */
+  z-index: 1; /* Sobreposição de 1 layer */
+  left: 0;
+  transform: translateY(-50%); /* 1º Sobe % do eixo y em relação ao switch */
+  top: 50%; /* 2º Desce 50% do eixo y em relação ao switch button. */
+  animation: slide-back 0.4s; /* Chama a animação e define o tempo. Diferente da l.110, não precisa "forwards"pois o estado inicial é left 0 (l.89)*/
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+#switch span {
+  display: block; /* Span por padrão é inline, por isso, precisamos transformar em block para aceitar algumas props*/
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /* Adicionar webkit para funcionar em outros browsers */
+  border-radius: 9999px;
+}
+
+/* Estrutura de alteração de modo light/dark */
+.light #switch button {
+  /* Estrutura nova */
+  animation: slide-in 0.4s forwards; /* Chama a animação, define o tempo, e "fowards" mantém as props finais de slide-in, impedindo a volta ao estado inicial.*/
+
+  /* Estrutura antiga
+    right: 0;
+    left: initial; /* volta ao estado inicial 
+    */
+}
+
+/* links */
+ul {
+  list-style: none; /* retira os bulletpoints */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* espaço entre os elementos */
+  padding: 24px 0;
+}
+
+ul li a {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px); /* efeito de embaçamento */
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /* Prefixo que alguns browser irão precisar para liberar o efeito. Deixando o mouse parado e em cima podemos ver quais serão. */
+  text-decoration: none; /* tira a linha de baixo dos textos */
+  font-weight: 500;
+  transition: background 0.2s; /* transição mais suave */
+}
+
+/* pseudo-selector */
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color); /* Recebe o atributo definido em :root */
+}
+
+#supporter-1 {
+  border: 1px solid red;
+  text-align: center;
+  padding: 24px;
+}
+
+#suppoter-1 img {
+  width: 10px;
+}
+
+#supporter-2 {
+    border: 1px solid red;
+    text-align: center;
+    padding: 24px;
+  }
+  
+  #suppoter-2 img {
+    width: 30px;
+    height: auto;
+  }
+
+/*social links*/
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0px;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%; /* borda c/raio de 50% forma o círculo perfeito */
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Media Queries */
+
+/* Regras que serão aplicadas somente em dispositivos com largura >= que a indicada abaixo */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* Animações */
+@keyframes slide-in {
+  /* O nome pode ser qq um*/
+  from {
+    /* Onde começa */
+    left: 0;
+  }
+  to {
+    /* Onde termina a brincadeira */
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  /* O nome pode ser qq um*/
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}

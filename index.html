@@ -1,13 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Against Racism</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-</body>
+<html lang="en" class="light">
+  <head>
+    <!--importando fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Permite o funcionamento das @mediaqueries -->
+    <title>DevLinks Project | Brenno Eudes</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!--Basta escrever link e dar enter-->
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <!--#nome_do_id e enter, criar uma div com id automaticamente-->
+        <img
+          src="./assets/avatar-light.png"
+          alt="Martin Luther King Jr. public speech and clenched fist."
+        />
+        <!--img e enter, criar uma tag img com os atribuitos automaticamente-->
+        <p>I have a dream...</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <!--Adiciona a função JS-->
+        <button></button>
+        <span> </span>
+      </div>
+      <div id="message">
+        <p>
+          It is not enough only to say no racism. Be anti-racist! <br />
+          Discover how and play with us!
+        </p>
+      </div>
+
+      <ul>
+        <li>
+          <a href="https://blacklivesmatter.com/" target="_blank"
+            >Download Free Anti-Racist Manual</a
+          >
+        </li>
+      </ul>
+      <div id="supporter-1">
+        <img
+          src="./assets/vini-jr-foundation-logo.svg"
+          alt="Vini Jr. Foundation logo"
+        />
+      </div>
+      <div id="supporter-2">
+        <img src="./assets/blm-logo.jpg" alt="Black Lives Matter logo" />
+      </div>
+
+      <div id="social-links">
+        <a href="https://github.com/brennoEudes" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+
+        <a href="https://www.linkedin.com/in/brennoeudes/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+    <!--Conexação com arquivo JS-->
+    <footer>Developed with ✊🏾 by Brenno Eudes</footer>
+  </body>
 </html>
