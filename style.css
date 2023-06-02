@@ -165,7 +165,6 @@ ul li a:hover {
 }
 
 #supporter-1 {
-  border: 1px solid red;
   text-align: center;
   padding: 24px;
 }
@@ -175,14 +174,15 @@ ul li a:hover {
 }
 
 #supporter-2 {
-    border: 1px solid red;
     text-align: center;
     padding: 24px;
   }
   
-  #suppoter-2 img {
-    width: 30px;
+  #supporter-2 img {
+    width: 100%;
+    max-width: 200px;
     height: auto;
+
   }
 
 /*social links*/
