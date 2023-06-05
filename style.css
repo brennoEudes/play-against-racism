@@ -61,9 +61,8 @@ body * {
 }
 
 #profile img {
-    border: 1px solid red;
   /*display: inline-block; /* Mantém as props. inline mas permite também a aplicação de props. do tipo block*/
-  width: 300px;
+  width: 200px;
 }
 
 #profile p {
@@ -98,10 +97,10 @@ body * {
   border-radius: 50%;
   position: absolute; /* Sobrepõe os elementos */
   z-index: 1; /* Sobreposição de 1 layer */
-  left: 0;
+  right: 0;
   transform: translateY(-50%); /* 1º Sobe % do eixo y em relação ao switch */
   top: 50%; /* 2º Desce 50% do eixo y em relação ao switch button. */
-  animation: slide-back 0.4s; /* Chama a animação e define o tempo. Diferente da l.110, não precisa "forwards"pois o estado inicial é left 0 (l.89)*/
+  animation: slide-back 0.4s; /* Chama a animação e define o tempo. Diferente da animation em .light #switch button, não precisa "forwards" pois o estado inicial é right 0. */
 }
 
 #switch button:hover {
@@ -173,18 +172,6 @@ ul li a:hover {
   width: 10px;
 }
 
-#supporter-2 {
-    text-align: center;
-    padding: 24px;
-  }
-  
-  #supporter-2 img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-
-  }
-
 /*social links*/
 
 #social-links {
@@ -231,20 +218,20 @@ footer {
   /* O nome pode ser qq um*/
   from {
     /* Onde começa */
-    left: 0;
+    right: 0;
   }
   to {
     /* Onde termina a brincadeira */
-    left: 50%;
+    right: 50%;
   }
 }
 
 @keyframes slide-back {
   /* O nome pode ser qq um*/
   from {
-    left: 50%;
+    right: 50%;
   }
   to {
-    left: 0;
+    right: 0;
   }
 }

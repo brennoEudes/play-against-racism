@@ -18,9 +18,10 @@ function toggleMode() {
     if(html.classList.contains('light')) {
       img.setAttribute("src", "./assets/avatar-light.png"); // se light, add image light
       img.setAttribute("alt","Martin Luther King Jr. public speech and clenched fist.");
+ 
     } else {
       img.setAttribute("src", "./assets/avatar-dark.png"); // sem light, add image dark
-      img.setAttribute("alt", "Vinicius Junior seriously.")
+      img.setAttribute("alt", "Vinicius Jr fist raised with hand closed.")
     }
   }
   
