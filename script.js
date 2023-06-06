@@ -14,7 +14,8 @@ function toggleMode() {
   // 3º instrução: pegar tags
   const img = document.querySelector("#profile img"); // msm do CSS
   const h1 = document.querySelector("#profile h1");
-  const message = document.querySelector("#message p");
+  const text1 = document.querySelector("#text-1 p");
+  const text2 = document.querySelector("#text-2 p");
   const downloadButton = document.querySelector("ul");
   const supporter1 = document.querySelector("#supporter-1");
 
@@ -26,15 +27,18 @@ function toggleMode() {
       "Martin Luther King Jr. public speech and clenched fist."
     );
     h1.textContent = "I have a dream...";
-    message.textContent = "";
+    text1.textContent = "";
+    text2.textContent = "";
     downloadButton.style.display = "none";
     supporter1.style.display = "none";
   } else {
     img.setAttribute("src", "./assets/avatar-dark.png"); // sem light, add image dark
     img.setAttribute("alt", "Vinicius Jr fist raised with hand closed.");
-    h1.textContent = "...someday, we all will play on the same team!";
-    message.textContent =
-      "It is not enough to say no racism. Be anti-racist! Click on the button and play with us!";
+    h1.textContent = "We all will play on the same team!";
+    text1.textContent =
+      "It is not enough to say no racism. Be anti-racist!";
+    text2.textContent =
+      "Click on the button below and play with us!";
     downloadButton.style.display = "block";
     supporter1.style.display = "block";
   }
