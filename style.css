@@ -27,6 +27,7 @@
   --switch-bg-url: url(./assets/sun.svg);
 }
 
+
 body {
   /* 
     background-image: url(./assets/bg-mobile-dark\ \(1080x1920\).jpg); /*chama a imagem da pasta assets
@@ -65,10 +66,10 @@ body * {
   width: 200px;
 }
 
-#profile p {
+#profile h1 {
   font-weight: 500;
-  line-height: 24px;
-  margin-top: 8px;
+  line-height: 50px;
+  margin-top: 24px;
 }
 
 #message {
@@ -169,7 +170,7 @@ ul li a:hover {
 }
 
 #suppoter-1 img {
-  width: 10px;
+  width: 15px;
 }
 
 /*social links*/
@@ -177,7 +178,6 @@ ul li a:hover {
 #social-links {
   display: flex;
   justify-content: center;
-  padding: 24px 0px;
   font-size: 24px;
 }
 
@@ -205,11 +205,11 @@ footer {
 /* Regras que serão aplicadas somente em dispositivos com largura >= que a indicada abaixo */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop-dark.jpg);
+    --bg-url: url(./assets/bg-desktop-dark-1440x1344.jpg);
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/bg-desktop-light-1440x1334.jpg);
   }
 }
 
