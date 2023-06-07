@@ -34,11 +34,9 @@ function toggleMode() {
   } else {
     img.setAttribute("src", "./assets/avatar-dark.png"); // sem light, add image dark
     img.setAttribute("alt", "Vinicius Jr fist raised with hand closed.");
-    h1.textContent = "We all will play on the same team!";
-    text1.textContent =
-      "It is not enough to say no racism. Be anti-racist!";
-    text2.textContent =
-      "Click on the button below and play with us!";
+    h1.textContent = "...someday, we all will play against racism!";
+    text1.textContent = "It is not enough to say no racism. Be anti-racist!";
+    text2.textContent = "Click on the button below and play with us!";
     downloadButton.style.display = "block";
     supporter1.style.display = "block";
   }
