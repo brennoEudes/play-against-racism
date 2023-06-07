@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   function toggleMode() {
     const html = document.documentElement;
     const isFirstLoad = !localStorage.getItem('modeToggled');
@@ -44,4 +44,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const switchButton = document.getElementById("switch");
   switchButton.addEventListener("click", toggleMode);
-});
+};
