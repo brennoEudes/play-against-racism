@@ -62,7 +62,7 @@ body * {
 
 #profile img {
   /*display: inline-block; /* Mantém as props. inline mas permite também a aplicação de props. do tipo block*/
-  width: 200px;
+  width: 250px;
 }
 
 #profile h1 {
@@ -215,7 +215,7 @@ footer {
   }
 
   #profile img {
-    width: 180px;
+    width: 200px;
   }
 
   #profile h1 {
