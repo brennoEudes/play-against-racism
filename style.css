@@ -8,7 +8,7 @@
 /* Escolhemos nomes quaisquer para definir os atributos de cor, background, cor borda, cor botão e cor entorno, imagem botão, que serão recebidos nos lugares indicados na página. */
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile-dark-360x999.jpg);
+  --bg-url: url(./assets/bg-mobile-dark-360x1799.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: (0, 0, 0, 0.02);
@@ -203,7 +203,7 @@ footer {
 
 @media (max-width: 375px) {
   :root {
-    --bg-url: url(./assets/bg-mobile-dark-360x999.jpg);
+    --bg-url: url(./assets/bg-mobile-dark-360x1799.jpg);
   }
 
   .light {
