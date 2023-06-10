@@ -37,7 +37,7 @@ body {
   /* Os atributos acima em shorthand: */
   background: var(--bg-url) no-repeat top
     /* Recebe o atributo definido em :root */ center/cover;
-  height: 110vh; /* Altura 100% da vh garantindo que não fique pedaços em branco em qq tamanho de visualização */
+  height: 100vh; /* Altura 100% da vh garantindo que não fique pedaços em branco em qq tamanho de visualização */
 }
 
 body * {
@@ -230,6 +230,10 @@ footer {
 
   #text-2 p {
     font-size: 15px;
+  }
+
+  body {
+    height: 120vh;
   }
 }
 
