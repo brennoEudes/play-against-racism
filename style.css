@@ -37,7 +37,7 @@ body {
   /* Os atributos acima em shorthand: */
   background: var(--bg-url) no-repeat top
     /* Recebe o atributo definido em :root */ center/cover;
-  height: 100vh; /* Altura 100% da vh garantindo que não fique pedaços em branco em qq tamanho de visualização */
+  height: 150vh; /* Altura 100% da vh garantindo que não fique pedaços em branco em qq tamanho de visualização */
 }
 
 body * {
