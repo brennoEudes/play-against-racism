@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var ulElement = document.querySelector('ul'); // Assuming there's only one <ul> tag on the page
+  ulElement.style.display = 'none';
+});
+
+
 function toggleMode() {
   // 1º instrução: pegar html
   const html = document.documentElement; // document é a representação do documento em formato de objeto JS. Através do ponto "." acessamos a tag html através do documentElement.
@@ -17,7 +23,6 @@ function toggleMode() {
   const text1 = document.querySelector("#text-1 p");
   const text2 = document.querySelector("#text-2 p");
   const mainButton1 = document.querySelector("ul");
-  const mainButton2 = document.querySelector("ul li a");
   const supporter1 = document.querySelector("#supporter-1");
   const supporter2 = document.querySelector("#supporter-1 img");
 
@@ -40,7 +45,6 @@ function toggleMode() {
     text1.textContent = "It is not enough to say no racism. Be anti-racist!";
     text2.textContent = "Click on the button below and play with us!";
     mainButton1.style.display = "block";
-    mainButton2.setAttribute("src", "");
     supporter1.style.display = "block";
     supporter2.setAttribute("src", "./assets/vini-jr-foundation-logo.svg");
   }
