@@ -201,6 +201,12 @@ footer {
   }
 }
 
+@media (max-width: 412px) {
+  body {
+    height: 130vh;
+  }
+}
+
 @media (max-width: 375px) {
   :root {
     --bg-url: url(./assets/bg-mobile-dark-360x1799.jpg);
@@ -232,12 +238,6 @@ footer {
     font-size: 15px;
   }
 
-  body {
-    height: 150vh;
-  }
-}
-
-@media (max-width: 320px) {
   body {
     height: 150vh;
   }
