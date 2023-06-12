@@ -237,6 +237,12 @@ footer {
   }
 }
 
+@media (max-width: 320px) {
+  body {
+    height: 150vh;
+  }
+}
+
 /* Animações */
 @keyframes slide-in {
   /* O nome pode ser qq um*/
