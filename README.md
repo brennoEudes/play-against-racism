@@ -1,5 +1,5 @@
 <p align="center">
-<img src=".github/play-against-racism-preview.jpg" alt="Project-demonstration" width=100%/>
+<img src=".github/devlinks-preview.jpg" alt="Project-demonstration" width=100%/>
 </p>
 
 ## The Project 
